@@ -34,7 +34,7 @@ import (
 	"net/http"
 	"os"
 	// "io"
-	"code.google.com/p/go.net/websocket"
+	"golang.org/x/net/websocket"
 )
 
 func Echo(ws *websocket.Conn) {
@@ -82,7 +82,7 @@ A client that talks to this server is
 package main
 
 import (
-	"code.google.com/p/go.net/websocket"
+	"golang.org/x/net/websocket"
 	"fmt"
 	"io"
 	"os"
