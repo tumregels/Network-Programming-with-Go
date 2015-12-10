@@ -12,7 +12,7 @@ A client that sends a `Person` object in JSON format is
 package main
 
 import (
-	"code.google.com/p/go.net/websocket"
+	"golang.org/x/net/websocket"
 	"fmt"
 	"os"
 )
@@ -60,7 +60,7 @@ and a server that reads it is
 package main
 
 import (
-	"code.google.com/p/go.net/websocket"
+	"golang.org/x/net/websocket"
 	"fmt"
 	"net/http"
 	"os"

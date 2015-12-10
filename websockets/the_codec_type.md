@@ -20,7 +20,7 @@ package xmlcodec
 
 import (
 	"encoding/xml"
-	"code.google.com/p/go.net/websocket"
+	"golang.org/x/net/websocket"
 )
 
 func xmlMarshal(v interface{}) (msg []byte, payloadType byte, err error) {
@@ -47,7 +47,7 @@ We can then serialise Go objects such as a `Person` into an XML document and sen
 package main
 
 import (
-	"code.google.com/p/go.net/websocket"
+	"golang.org/x/net/websocket"
 	"fmt"
 	"os"
 	"xmlcodec"
@@ -95,7 +95,7 @@ A server which receives this and just prints information to the console is
 package main
 
 import (
-	"code.google.com/p/go.net/websocket"
+	"golang.org/x/net/websocket"
 	"fmt"
 	"net/http"
 	"os"

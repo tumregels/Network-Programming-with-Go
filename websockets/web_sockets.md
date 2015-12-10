@@ -4,21 +4,15 @@ Web sockets are designed to answer a common problem with web systems: the server
 
 ## Warning
 
-The Web Sockets package is not currently in the main Go 1 tree and is not included in the current distributions. To use it, you need to install it by 
+The Web Sockets package is not currently in the <a href="https://github.com/golang/go">main Go 1.x tree</a> and is not included in the current distributions. To use it, you need to install it by 
 
 ```
-go get code.google.com/p/go.net/websocket 
+go get golang.org/x/net/websocket
 ```
 
 ## Introduction
 
-The websockets model will change for release r61. This describes the new package, not the package in r60 and earlier. If you do not have r61, at the time of writing, use 
-
-```
-hg pull; hg update weekly
-```
-
-to download it.
+(Note: The websockets model changed in release r61 of Go 1.0. This describes the current package.)
 
 The standard model of interaction between a web user agent such as a browser and a web server such as Apache is that the user agent makes HTTP requests and the server makes a single reply to each one. In the case of a browser, the request is made by clicking on a link, entering a URL into the address bar, clicking on the forward or back buttons, etc. The response is treated as a new page and is loaded into a browser window.
 
