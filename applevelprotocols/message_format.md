@@ -2,7 +2,7 @@
 
 In the last chapter we discussed some possibilities for representing data to be sent across the wire. Now we look one level up, to the messages which may contain such data.
 
-* The client and server will exchange messages with different * meanings. e.g.
+* The client and server will exchange messages with different meanings, e.g.
     * Login request,
     * get record request,
     * login reply,
