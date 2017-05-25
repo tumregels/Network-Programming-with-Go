@@ -58,7 +58,7 @@ Pseudocode is
         }
     }
 
-Character formats are easier to setup and easier to debug. For example, you can use *telnet* to connect to a server on any port, and send client requests to that server. It isn't so easy the other way, but you can use tools like *tcpdump* to snoop on TCP traffic and see immediately what clients are sending to servers.
+Character formats are easier to set up and easier to debug. For example, you can use *telnet* to connect to a server on any port, and send client requests to that server. It isn't so easy the other way, but you can use tools like *tcpdump* to snoop on TCP traffic and see immediately what clients are sending to servers.
 
 There is not the same level of support in Go for managing character streams. There are significant issues with character sets and character encodings, and we will explore these issues in a later chapter.
 
