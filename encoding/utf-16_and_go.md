@@ -21,8 +21,8 @@ Unfortunately, there is a little devil lurking behind UTF-16. It is basically an
 
 Unicode has addressed this with a special character known as the BOM (byte order marker). This is a zero-width non-printing character, so you never see it in text. But its value 0xfffe is chosen so that you can tell the byte-order:
 
-* In a big-endian system it is FF FE
-* In a little-endian system it is FE FF
+* In a big-endian system it is FE FF
+* In a little-endian system it is FF FE
 
 Text will sometimes place the BOM as the first character in the text. The reader can then examine these two bytes to determine what endian-ness has been used.
 
