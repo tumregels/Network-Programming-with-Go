@@ -12,9 +12,10 @@ A client that sends a `Person` object in JSON format is
 package main
 
 import (
-	"golang.org/x/net/websocket"
-	"fmt"
+	"log"
 	"os"
+
+	"golang.org/x/net/websocket"
 )
 
 type Person struct {
@@ -24,30 +25,27 @@ type Person struct {
 
 func main() {
 	if len(os.Args) != 2 {
-		fmt.Println("Usage: ", os.Args[0], "ws://host:port")
-		os.Exit(1)
+		log.Fatalf("Usage: %v ws://host:port", os.Args[0])
 	}
 	service := os.Args[1]
 
-	conn, err := websocket.Dial(service, "",
-		"http://localhost")
+	conn, err := websocket.Dial(service, "", "http://localhost")
 	checkError(err)
 
-	person := Person{Name: "Jan",
+	person := Person{
+		Name:   "Jan",
 		Emails: []string{"ja@newmarch.name", "jan.newmarch@gmail.com"},
 	}
 
 	err = websocket.JSON.Send(conn, person)
 	if err != nil {
-		fmt.Println("Couldn't send msg " + err.Error())
+		log.Fatalf("Couldn't send msg %v", err)
 	}
-	os.Exit(0)
 }
 
 func checkError(err error) {
 	if err != nil {
-		fmt.Println("Fatal error ", err.Error())
-		os.Exit(1)
+		log.Fatalf("Fatal error %v", err)
 	}
 }
 ```
@@ -60,10 +58,11 @@ and a server that reads it is
 package main
 
 import (
-	"golang.org/x/net/websocket"
 	"fmt"
+	"log"
 	"net/http"
-	"os"
+
+	"golang.org/x/net/websocket"
 )
 
 type Person struct {
@@ -76,17 +75,15 @@ func ReceivePerson(ws *websocket.Conn) {
 	err := websocket.JSON.Receive(ws, &person)
 	if err != nil {
 		fmt.Println("Can't receive")
-	} else {
-
-		fmt.Println("Name: " + person.Name)
-		for _, e := range person.Emails {
-			fmt.Println("An email: " + e)
-		}
+		return
+	}
+	fmt.Println("Name: " + person.Name)
+	for _, e := range person.Emails {
+		fmt.Println("An email: " + e)
 	}
 }
 
 func main() {
-
 	http.Handle("/", websocket.Handler(ReceivePerson))
 	err := http.ListenAndServe(":12345", nil)
 	checkError(err)
@@ -94,8 +91,7 @@ func main() {
 
 func checkError(err error) {
 	if err != nil {
-		fmt.Println("Fatal error ", err.Error())
-		os.Exit(1)
+		log.Fatalf("Fatal error %v", err)
 	}
 }
 ```
