@@ -1,0 +1,1760 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>Overview of HTTP · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.0.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="simple_user-agents.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../architecture/">
+            
+                <a href="../architecture/">
+            
+                    
+                    Architecture
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../architecture/protocol_layers.html">
+            
+                <a href="../architecture/protocol_layers.html">
+            
+                    
+                    Protocol Layers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../architecture/networking.html">
+            
+                <a href="../architecture/networking.html">
+            
+                    
+                    Networking
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../architecture/gateways.html">
+            
+                <a href="../architecture/gateways.html">
+            
+                    
+                    Gateways
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../architecture/packet_encapsulation.html">
+            
+                <a href="../architecture/packet_encapsulation.html">
+            
+                    
+                    Packet encapsulation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../architecture/connection_models.html">
+            
+                <a href="../architecture/connection_models.html">
+            
+                    
+                    Connection Models
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../architecture/communications_models.html">
+            
+                <a href="../architecture/communications_models.html">
+            
+                    
+                    Communications Models
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../architecture/distributed_computing_models.html">
+            
+                <a href="../architecture/distributed_computing_models.html">
+            
+                    
+                    Distributed Computing Models
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../architecture/clientserver_system.html">
+            
+                <a href="../architecture/clientserver_system.html">
+            
+                    
+                    Client/Server System
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../architecture/clientserver_application.html">
+            
+                <a href="../architecture/clientserver_application.html">
+            
+                    
+                    Client/Server Application
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../architecture/server_distribution.html">
+            
+                <a href="../architecture/server_distribution.html">
+            
+                    
+                    Server Distribution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../architecture/component_distribution.html">
+            
+                <a href="../architecture/component_distribution.html">
+            
+                    
+                    Component Distribution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="../architecture/middleware_model.html">
+            
+                <a href="../architecture/middleware_model.html">
+            
+                    
+                    Middleware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="../architecture/continuum_of_processing.html">
+            
+                <a href="../architecture/continuum_of_processing.html">
+            
+                    
+                    Continuum of Processing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="../architecture/points_of_failure.html">
+            
+                <a href="../architecture/points_of_failure.html">
+            
+                    
+                    Points of Failure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="../architecture/acceptance_factors.html">
+            
+                <a href="../architecture/acceptance_factors.html">
+            
+                    
+                    Acceptance Factors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="../architecture/transparency.html">
+            
+                <a href="../architecture/transparency.html">
+            
+                    
+                    Transparency
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.17" data-path="../architecture/eight_fallacies_of_distributed_computing.html">
+            
+                <a href="../architecture/eight_fallacies_of_distributed_computing.html">
+            
+                    
+                    Eight fallacies of distributed computing
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../overview/">
+            
+                <a href="../overview/">
+            
+                    
+                    Overview of Go language
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../socket/">
+            
+                <a href="../socket/">
+            
+                    
+                    Socket-level Programming
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../socket/the_tcpip_stack.html">
+            
+                <a href="../socket/the_tcpip_stack.html">
+            
+                    
+                    The TCP/IP stack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../socket/internet_addresses.html">
+            
+                <a href="../socket/internet_addresses.html">
+            
+                    
+                    Internet addresses
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../socket/ip_address_type.html">
+            
+                <a href="../socket/ip_address_type.html">
+            
+                    
+                    IP address type
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../socket/services.html">
+            
+                <a href="../socket/services.html">
+            
+                    
+                    Services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../socket/tcp_sockets.html">
+            
+                <a href="../socket/tcp_sockets.html">
+            
+                    
+                    TCP Sockets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../socket/controlling_tcp_connections.html">
+            
+                <a href="../socket/controlling_tcp_connections.html">
+            
+                    
+                    Controlling TCP connections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../socket/udp_datagrams.html">
+            
+                <a href="../socket/udp_datagrams.html">
+            
+                    
+                    UDP Datagrams
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../socket/server_listening_on_multiple_sockets.html">
+            
+                <a href="../socket/server_listening_on_multiple_sockets.html">
+            
+                    
+                    Server listening on multiple sockets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../socket/the_types_conn_packetconn_and_listener.html">
+            
+                <a href="../socket/the_types_conn_packetconn_and_listener.html">
+            
+                    
+                    The types Conn, PacketConn and Listener
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="../socket/raw_sockets_and_the_type_ipconn.html">
+            
+                <a href="../socket/raw_sockets_and_the_type_ipconn.html">
+            
+                    
+                    Raw sockets and the type IPConn
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../dataserialisation/">
+            
+                <a href="../dataserialisation/">
+            
+                    
+                    Data Serialisation
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../dataserialisation/mutual_agreement.html">
+            
+                <a href="../dataserialisation/mutual_agreement.html">
+            
+                    
+                    Mutual agreement
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../dataserialisation/self_describing_data.html">
+            
+                <a href="../dataserialisation/self_describing_data.html">
+            
+                    
+                    Self-describing data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../dataserialisation/asn1.html">
+            
+                <a href="../dataserialisation/asn1.html">
+            
+                    
+                    ASN.1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../dataserialisation/json.html">
+            
+                <a href="../dataserialisation/json.html">
+            
+                    
+                    JSON
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../dataserialisation/the_gob_package.html">
+            
+                <a href="../dataserialisation/the_gob_package.html">
+            
+                    
+                    The gob package
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../dataserialisation/encoding_binary_data_as_strings.html">
+            
+                <a href="../dataserialisation/encoding_binary_data_as_strings.html">
+            
+                    
+                    Encoding binary data as strings
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../applevelprotocols/">
+            
+                <a href="../applevelprotocols/">
+            
+                    
+                    Application-Level Protocols
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../applevelprotocols/protocol_design.html">
+            
+                <a href="../applevelprotocols/protocol_design.html">
+            
+                    
+                    Protocol Design
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../applevelprotocols/version_control.html">
+            
+                <a href="../applevelprotocols/version_control.html">
+            
+                    
+                    Version control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../applevelprotocols/message_format.html">
+            
+                <a href="../applevelprotocols/message_format.html">
+            
+                    
+                    Message Format
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../applevelprotocols/data_format.html">
+            
+                <a href="../applevelprotocols/data_format.html">
+            
+                    
+                    Data Format
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../applevelprotocols/simple_example.html">
+            
+                <a href="../applevelprotocols/simple_example.html">
+            
+                    
+                    Simple Example
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../applevelprotocols/state.html">
+            
+                <a href="../applevelprotocols/state.html">
+            
+                    
+                    State
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../encoding/">
+            
+                <a href="../encoding/">
+            
+                    
+                    Managing character sets and encodings
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../encoding/definitions.html">
+            
+                <a href="../encoding/definitions.html">
+            
+                    
+                    Definitions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../encoding/ascii.html">
+            
+                <a href="../encoding/ascii.html">
+            
+                    
+                    ASCII
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../encoding/iso_8859.html">
+            
+                <a href="../encoding/iso_8859.html">
+            
+                    
+                    ISO 8859
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../encoding/unicode.html">
+            
+                <a href="../encoding/unicode.html">
+            
+                    
+                    Unicode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../encoding/utf-8_go_and_runes.html">
+            
+                <a href="../encoding/utf-8_go_and_runes.html">
+            
+                    
+                    UTF-8 Go and runes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../encoding/utf-16_and_go.html">
+            
+                <a href="../encoding/utf-16_and_go.html">
+            
+                    
+                    UTF-16 and Go
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../encoding/unicode_gotchas.html">
+            
+                <a href="../encoding/unicode_gotchas.html">
+            
+                    
+                    Unicode gotcha's
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8" data-path="../encoding/iso_8859_and_go.html">
+            
+                <a href="../encoding/iso_8859_and_go.html">
+            
+                    
+                    ISO 8859 and Go
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9" data-path="../encoding/other_character_sets_and_go.html">
+            
+                <a href="../encoding/other_character_sets_and_go.html">
+            
+                    
+                    Other character sets and Go
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../security/">
+            
+                <a href="../security/">
+            
+                    
+                    Security
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../security/iso_security_architecture.html">
+            
+                <a href="../security/iso_security_architecture.html">
+            
+                    
+                    ISO security architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../security/data_integrity.html">
+            
+                <a href="../security/data_integrity.html">
+            
+                    
+                    Data integrity
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../security/symmetric_key_encryption.html">
+            
+                <a href="../security/symmetric_key_encryption.html">
+            
+                    
+                    Symmetric key encryption
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../security/public_key_encryption.html">
+            
+                <a href="../security/public_key_encryption.html">
+            
+                    
+                    Public key encryption
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../security/x509_certificates.html">
+            
+                <a href="../security/x509_certificates.html">
+            
+                    
+                    X.509 certificates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../security/tls.html">
+            
+                <a href="../security/tls.html">
+            
+                    
+                    TLS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    HTTP
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.9.1" data-path="overview_of_http.html">
+            
+                <a href="overview_of_http.html">
+            
+                    
+                    Overview of HTTP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="simple_user-agents.html">
+            
+                <a href="simple_user-agents.html">
+            
+                    
+                    Simple user-agents
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="configuring_http_requests.html">
+            
+                <a href="configuring_http_requests.html">
+            
+                    
+                    Configuring HTTP requests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="the_client_object.html">
+            
+                <a href="the_client_object.html">
+            
+                    
+                    The Client object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="proxy_handling.html">
+            
+                <a href="proxy_handling.html">
+            
+                    
+                    Proxy handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="https_connections_by_clients.html">
+            
+                <a href="https_connections_by_clients.html">
+            
+                    
+                    HTTPS connections by clients
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="servers.html">
+            
+                <a href="servers.html">
+            
+                    
+                    Servers
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../templates/">
+            
+                <a href="../templates/">
+            
+                    
+                    Templates
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../templates/inserting_object_values.html">
+            
+                <a href="../templates/inserting_object_values.html">
+            
+                    
+                    Inserting object values
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../templates/pipelines.html">
+            
+                <a href="../templates/pipelines.html">
+            
+                    
+                    Pipelines
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../templates/defining_functions.html">
+            
+                <a href="../templates/defining_functions.html">
+            
+                    
+                    Defining functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../templates/variables.html">
+            
+                <a href="../templates/variables.html">
+            
+                    
+                    Variables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../templates/conditional_statements.html">
+            
+                <a href="../templates/conditional_statements.html">
+            
+                    
+                    Conditional statements
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../webserver/">
+            
+                <a href="../webserver/">
+            
+                    
+                    A Complete Web Server
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../webserver/static_pages.html">
+            
+                <a href="../webserver/static_pages.html">
+            
+                    
+                    Static pages
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../webserver/templates.html">
+            
+                <a href="../webserver/templates.html">
+            
+                    
+                    Templates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../webserver/the_chinese_dictionary.html">
+            
+                <a href="../webserver/the_chinese_dictionary.html">
+            
+                    
+                    The Chinese Dictionary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../webserver/flash_cards.html">
+            
+                <a href="../webserver/flash_cards.html">
+            
+                    
+                    Flash cards
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../webserver/the_complete_server.html">
+            
+                <a href="../webserver/the_complete_server.html">
+            
+                    
+                    The Complete Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.6" data-path="../webserver/other_bits_javascript_and_css.html">
+            
+                <a href="../webserver/other_bits_javascript_and_css.html">
+            
+                    
+                    Other Bits: JavaScript and CSS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../html/">
+            
+                <a href="../html/">
+            
+                    
+                    HTML
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../xml/">
+            
+                <a href="../xml/">
+            
+                    
+                    XML
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../xml/parsing_xml.html">
+            
+                <a href="../xml/parsing_xml.html">
+            
+                    
+                    Parsing XML
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../xml/unmarshalling_xml.html">
+            
+                <a href="../xml/unmarshalling_xml.html">
+            
+                    
+                    Unmarshalling XML
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../xml/marshalling_xml.html">
+            
+                <a href="../xml/marshalling_xml.html">
+            
+                    
+                    Marshalling XML
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" data-path="../xml/xhtml_and_html.html">
+            
+                <a href="../xml/xhtml_and_html.html">
+            
+                    
+                    XHTML and HTML
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../rpc/">
+            
+                <a href="../rpc/">
+            
+                    
+                    Remote Procedure Call
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../rpc/go_rpc.html">
+            
+                <a href="../rpc/go_rpc.html">
+            
+                    
+                    Go RPC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="../rpc/json.html">
+            
+                <a href="../rpc/json.html">
+            
+                    
+                    JSON
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../networkchannels/">
+            
+                <a href="../networkchannels/">
+            
+                    
+                    Network channels
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../networkchannels/channel_server.html">
+            
+                <a href="../networkchannels/channel_server.html">
+            
+                    
+                    Channel server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="../networkchannels/channel_client.html">
+            
+                <a href="../networkchannels/channel_client.html">
+            
+                    
+                    Channel client
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="../networkchannels/handling_timeouts.html">
+            
+                <a href="../networkchannels/handling_timeouts.html">
+            
+                    
+                    Handling Timeouts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="../networkchannels/channels_of_channels.html">
+            
+                <a href="../networkchannels/channels_of_channels.html">
+            
+                    
+                    Channels of channels
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../websockets/">
+            
+                <a href="../websockets/">
+            
+                    
+                    Web sockets
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../websockets/web_socket_server.html">
+            
+                <a href="../websockets/web_socket_server.html">
+            
+                    
+                    Web socket server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="../websockets/the_message_object.html">
+            
+                <a href="../websockets/the_message_object.html">
+            
+                    
+                    The Message object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3" data-path="../websockets/the_json_object.html">
+            
+                <a href="../websockets/the_json_object.html">
+            
+                    
+                    The JSON object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.4" data-path="../websockets/the_codec_type.html">
+            
+                <a href="../websockets/the_codec_type.html">
+            
+                    
+                    The Codec type
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.5" data-path="../websockets/web_sockets_over_tls.html">
+            
+                <a href="../websockets/web_sockets_over_tls.html">
+            
+                    
+                    Web sockets over TLS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Overview of HTTP</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="overview-of-http">Overview of HTTP</h2>
+<h3 id="urls-and-resources">URLs and resources</h3>
+<p>URLs specify the location of a <em>resource</em>. A resource is often a static file, such as an HTML document, an image, or a sound file. But increasingly, it may be a dynamically generated object, perhaps based on information stored in a database.</p>
+<p>When a user agent requests a resource, what is returned is not the resource itself, but some <em>representation</em> of that resource. For example, if the resource is a static file, then what is sent to the user agent is a copy of the file.</p>
+<p>Multiple URLs may point to the same resource, and an HTTP server will return appropriate representations of the resource for each URL. For example, an company might make product information available both internally and externally using different URLs for the same product. The internal representation of the product might include information such as internal contact officers for the product, while the external representation might include the location of stores selling the product.</p>
+<p>This view of resources means that the HTTP protocol can be fairly simple and straightforward, while an HTTP server can be arbitrarily complex. HTTP has to deliver requests from user agents to servers and return a byte stream, while a server might have to do any amount of processing of the request.</p>
+<h3 id="http-characteristics">HTTP characteristics</h3>
+<p>HTTP is a stateless, connectionless, reliable protocol. In the simplest form, each request from a user agent is handled reliably and then the connection is broken. Each request involves a separate TCP connection, so if many resources are required (such as images embedded in an HTML page) then many TCP connections have to be set up and torn down in a short space of time.</p>
+<p>There are many optimisations in HTTP which add complexity to the simple structure, in order to create a more efficient and reliable protocol.</p>
+<h3 id="versions">Versions</h3>
+<p>There are 3 versions of HTTP</p>
+<ul>
+<li>Version 0.9 - totally obsolete</li>
+<li>Version 1.0 - almost obsolete</li>
+<li>Version 1.1 - current</li>
+</ul>
+<p>Each version must understand requests and responses of earlier versions.</p>
+<h3 id="http-09">HTTP 0.9</h3>
+<h4 id="request-format">Request format</h4>
+<pre><code>Request = Simple-Request
+
+Simple-Request = &quot;GET&quot; SP Request-URI CRLF
+</code></pre><h4 id="response-format">Response format</h4>
+<p>A response is of the form</p>
+<pre><code>Response = Simple-Response
+
+Simple-Response = [Entity-Body]
+</code></pre><h3 id="http-10">HTTP 1.0</h3>
+<p>This version added much more information to the requests and responses. Rather than &quot;grow&quot; the 0.9 format, it was just left alongside the new version.</p>
+<h4 id="request-format">Request format</h4>
+<p>The format of requests from client to server is</p>
+<pre><code>Request = Simple-Request | Full-Request
+
+Simple-Request = &quot;GET&quot; SP Request-URI CRLF
+
+Full-Request = Request-Line
+        *(General-Header
+        | Request-Header
+        | Entity-Header)
+        CRLF
+        [Entity-Body]
+</code></pre><p>A Simple-Request is an HTTP/0.9 request and must be replied to by a Simple-Response.</p>
+<p>A Request-Line has format</p>
+<pre><code>Request-Line = Method SP Request-URI SP HTTP-Version CRLF
+</code></pre><p>where</p>
+<pre><code>Method = &quot;GET&quot; | &quot;HEAD&quot; | POST |
+     extension-method
+</code></pre><p>e.g. <code>GET http://jan.newmarch.name/index.html HTTP/1.0</code></p>
+<h4 id="response-format">Response format</h4>
+<p>A response is of the form</p>
+<pre><code>Response = Simple-Response | Full-Response
+
+Simple-Response = [Entity-Body]
+
+Full-Response = Status-Line
+        *(General-Header 
+        | Response-Header
+        | Entity-Header)
+        CRLF
+        [Entity-Body]
+</code></pre><p>The Status-Line gives information about the fate of the request:</p>
+<pre><code>Status-Line = HTTP-Version SP Status-Code SP Reason-Phrase CRLF
+</code></pre><p>e.g.</p>
+<pre><code>HTTP/1.0 200 OK
+
+The codes are
+
+Status-Code =      &quot;200&quot; ; OK
+        | &quot;201&quot; ; Created
+        | &quot;202&quot; ; Accepted
+        | &quot;204&quot; ; No Content
+        | &quot;301&quot; ; Moved permanently
+        | &quot;302&quot; ; Moved temporarily
+        | &quot;304&quot; ; Not modified
+        | &quot;400&quot; ; Bad request
+        | &quot;401&quot; ; Unauthorised
+        | &quot;403&quot; ; Forbidden
+        | &quot;404&quot; ; Not found
+        | &quot;500&quot; ; Internal server error
+        | &quot;501&quot; ; Not implemented
+        | &quot;502&quot; ; Bad gateway
+        | &quot;503&quot; | Service unavailable
+        | extension-code
+</code></pre><p>The Entity-Header contains useful information about the Entity-Body to follow</p>
+<pre><code>Entity-Header =    Allow
+        | Content-Encoding
+        | Content-Length
+        | Content-Type
+        | Expires
+        | Last-Modified
+        | extension-header
+</code></pre><p>For example</p>
+<pre><code>HTTP/1.1 200 OK
+Date: Fri, 29 Aug 2003 00:59:56 GMT
+Server: Apache/2.0.40 (Unix)
+Accept-Ranges: bytes
+Content-Length: 1595
+Connection: close
+Content-Type: text/html; charset=ISO-8859-1
+</code></pre><h3 id="http-11">HTTP 1.1</h3>
+<p>HTTP 1.1 fixes many problems with HTTP 1.0, but is more complex because of it. This version is done by extending or refining the options available to HTTP 1.0. e.g.</p>
+<ul>
+<li>there are more commands such as TRACE and CONNECT</li>
+<li>you should use absolute URLs, particularly for connecting by proxies e.g</li>
+</ul>
+<pre><code>GET http://www.w3.org/index.html HTTP/1.1
+</code></pre><ul>
+<li>there are more attributes such as If-Modified-Since, also for use by proxies</li>
+</ul>
+<p>The changes include</p>
+<ul>
+<li>hostname identification (allows virtual hosts)</li>
+<li>content negotiation (multiple languages)</li>
+<li>persistent connections (reduces TCP overheads - this is very messy)</li>
+<li>chunked transfers</li>
+<li>byte ranges (request parts of documents)</li>
+<li>proxy support </li>
+</ul>
+<p>The 0.9 protocol took one page. The 1.0 protocol was described in about 20 pages. 1.1 takes 120 pages. </p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: HTTP">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="simple_user-agents.html" class="navigation navigation-next " aria-label="Next page: Simple user-agents">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Overview of HTTP","level":"1.9.1","depth":2,"next":{"title":"Simple user-agents","level":"1.9.2","depth":2,"path":"http/simple_user-agents.md","ref":"http/simple_user-agents.md","articles":[]},"previous":{"title":"HTTP","level":"1.9","depth":1,"path":"http/README.md","ref":"http/README.md","articles":[{"title":"Overview of HTTP","level":"1.9.1","depth":2,"path":"http/overview_of_http.md","ref":"http/overview_of_http.md","articles":[]},{"title":"Simple user-agents","level":"1.9.2","depth":2,"path":"http/simple_user-agents.md","ref":"http/simple_user-agents.md","articles":[]},{"title":"Configuring HTTP requests","level":"1.9.3","depth":2,"path":"http/configuring_http_requests.md","ref":"http/configuring_http_requests.md","articles":[]},{"title":"The Client object","level":"1.9.4","depth":2,"path":"http/the_client_object.md","ref":"http/the_client_object.md","articles":[]},{"title":"Proxy handling","level":"1.9.5","depth":2,"path":"http/proxy_handling.md","ref":"http/proxy_handling.md","articles":[]},{"title":"HTTPS connections by clients","level":"1.9.6","depth":2,"path":"http/https_connections_by_clients.md","ref":"http/https_connections_by_clients.md","articles":[]},{"title":"Servers","level":"1.9.7","depth":2,"path":"http/servers.md","ref":"http/servers.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"3.0.x","theme":"default","variables":{},"plugins":["-sharing","katex@1.1.3","edit-link@2.0.x","github@2.0.x"],"pluginsConfig":{"edit-link":{"base":"https://github.com/tumregels/Network-Programming-with-Go/edit/master","label":"Edit"},"github":{"url":"https://github.com/tumregels/Network-Programming-with-Go"},"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":14,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"toc":true},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"http/overview_of_http.md","mtime":"2020-03-09T13:33:11.740Z","type":"markdown"},"gitbook":{"version":"3.0.3","time":"2020-03-09T14:42:51.086Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/buttons.js"></script>
+        
+    
+
+    </body>
+</html>
+

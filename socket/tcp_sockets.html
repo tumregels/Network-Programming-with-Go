@@ -1,0 +1,1890 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>TCP Sockets · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.0.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="controlling_tcp_connections.html" />
+    
+    
+    <link rel="prev" href="services.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../architecture/">
+            
+                <a href="../architecture/">
+            
+                    
+                    Architecture
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../architecture/protocol_layers.html">
+            
+                <a href="../architecture/protocol_layers.html">
+            
+                    
+                    Protocol Layers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../architecture/networking.html">
+            
+                <a href="../architecture/networking.html">
+            
+                    
+                    Networking
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../architecture/gateways.html">
+            
+                <a href="../architecture/gateways.html">
+            
+                    
+                    Gateways
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../architecture/packet_encapsulation.html">
+            
+                <a href="../architecture/packet_encapsulation.html">
+            
+                    
+                    Packet encapsulation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../architecture/connection_models.html">
+            
+                <a href="../architecture/connection_models.html">
+            
+                    
+                    Connection Models
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../architecture/communications_models.html">
+            
+                <a href="../architecture/communications_models.html">
+            
+                    
+                    Communications Models
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../architecture/distributed_computing_models.html">
+            
+                <a href="../architecture/distributed_computing_models.html">
+            
+                    
+                    Distributed Computing Models
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../architecture/clientserver_system.html">
+            
+                <a href="../architecture/clientserver_system.html">
+            
+                    
+                    Client/Server System
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../architecture/clientserver_application.html">
+            
+                <a href="../architecture/clientserver_application.html">
+            
+                    
+                    Client/Server Application
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../architecture/server_distribution.html">
+            
+                <a href="../architecture/server_distribution.html">
+            
+                    
+                    Server Distribution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../architecture/component_distribution.html">
+            
+                <a href="../architecture/component_distribution.html">
+            
+                    
+                    Component Distribution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="../architecture/middleware_model.html">
+            
+                <a href="../architecture/middleware_model.html">
+            
+                    
+                    Middleware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="../architecture/continuum_of_processing.html">
+            
+                <a href="../architecture/continuum_of_processing.html">
+            
+                    
+                    Continuum of Processing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="../architecture/points_of_failure.html">
+            
+                <a href="../architecture/points_of_failure.html">
+            
+                    
+                    Points of Failure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="../architecture/acceptance_factors.html">
+            
+                <a href="../architecture/acceptance_factors.html">
+            
+                    
+                    Acceptance Factors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="../architecture/transparency.html">
+            
+                <a href="../architecture/transparency.html">
+            
+                    
+                    Transparency
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.17" data-path="../architecture/eight_fallacies_of_distributed_computing.html">
+            
+                <a href="../architecture/eight_fallacies_of_distributed_computing.html">
+            
+                    
+                    Eight fallacies of distributed computing
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../overview/">
+            
+                <a href="../overview/">
+            
+                    
+                    Overview of Go language
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Socket-level Programming
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="the_tcpip_stack.html">
+            
+                <a href="the_tcpip_stack.html">
+            
+                    
+                    The TCP/IP stack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="internet_addresses.html">
+            
+                <a href="internet_addresses.html">
+            
+                    
+                    Internet addresses
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="ip_address_type.html">
+            
+                <a href="ip_address_type.html">
+            
+                    
+                    IP address type
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="services.html">
+            
+                <a href="services.html">
+            
+                    
+                    Services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.5" data-path="tcp_sockets.html">
+            
+                <a href="tcp_sockets.html">
+            
+                    
+                    TCP Sockets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="controlling_tcp_connections.html">
+            
+                <a href="controlling_tcp_connections.html">
+            
+                    
+                    Controlling TCP connections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="udp_datagrams.html">
+            
+                <a href="udp_datagrams.html">
+            
+                    
+                    UDP Datagrams
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="server_listening_on_multiple_sockets.html">
+            
+                <a href="server_listening_on_multiple_sockets.html">
+            
+                    
+                    Server listening on multiple sockets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="the_types_conn_packetconn_and_listener.html">
+            
+                <a href="the_types_conn_packetconn_and_listener.html">
+            
+                    
+                    The types Conn, PacketConn and Listener
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="raw_sockets_and_the_type_ipconn.html">
+            
+                <a href="raw_sockets_and_the_type_ipconn.html">
+            
+                    
+                    Raw sockets and the type IPConn
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../dataserialisation/">
+            
+                <a href="../dataserialisation/">
+            
+                    
+                    Data Serialisation
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../dataserialisation/mutual_agreement.html">
+            
+                <a href="../dataserialisation/mutual_agreement.html">
+            
+                    
+                    Mutual agreement
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../dataserialisation/self_describing_data.html">
+            
+                <a href="../dataserialisation/self_describing_data.html">
+            
+                    
+                    Self-describing data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../dataserialisation/asn1.html">
+            
+                <a href="../dataserialisation/asn1.html">
+            
+                    
+                    ASN.1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../dataserialisation/json.html">
+            
+                <a href="../dataserialisation/json.html">
+            
+                    
+                    JSON
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../dataserialisation/the_gob_package.html">
+            
+                <a href="../dataserialisation/the_gob_package.html">
+            
+                    
+                    The gob package
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../dataserialisation/encoding_binary_data_as_strings.html">
+            
+                <a href="../dataserialisation/encoding_binary_data_as_strings.html">
+            
+                    
+                    Encoding binary data as strings
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../applevelprotocols/">
+            
+                <a href="../applevelprotocols/">
+            
+                    
+                    Application-Level Protocols
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../applevelprotocols/protocol_design.html">
+            
+                <a href="../applevelprotocols/protocol_design.html">
+            
+                    
+                    Protocol Design
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../applevelprotocols/version_control.html">
+            
+                <a href="../applevelprotocols/version_control.html">
+            
+                    
+                    Version control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../applevelprotocols/message_format.html">
+            
+                <a href="../applevelprotocols/message_format.html">
+            
+                    
+                    Message Format
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../applevelprotocols/data_format.html">
+            
+                <a href="../applevelprotocols/data_format.html">
+            
+                    
+                    Data Format
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../applevelprotocols/simple_example.html">
+            
+                <a href="../applevelprotocols/simple_example.html">
+            
+                    
+                    Simple Example
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../applevelprotocols/state.html">
+            
+                <a href="../applevelprotocols/state.html">
+            
+                    
+                    State
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../encoding/">
+            
+                <a href="../encoding/">
+            
+                    
+                    Managing character sets and encodings
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../encoding/definitions.html">
+            
+                <a href="../encoding/definitions.html">
+            
+                    
+                    Definitions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../encoding/ascii.html">
+            
+                <a href="../encoding/ascii.html">
+            
+                    
+                    ASCII
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../encoding/iso_8859.html">
+            
+                <a href="../encoding/iso_8859.html">
+            
+                    
+                    ISO 8859
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../encoding/unicode.html">
+            
+                <a href="../encoding/unicode.html">
+            
+                    
+                    Unicode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../encoding/utf-8_go_and_runes.html">
+            
+                <a href="../encoding/utf-8_go_and_runes.html">
+            
+                    
+                    UTF-8 Go and runes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../encoding/utf-16_and_go.html">
+            
+                <a href="../encoding/utf-16_and_go.html">
+            
+                    
+                    UTF-16 and Go
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../encoding/unicode_gotchas.html">
+            
+                <a href="../encoding/unicode_gotchas.html">
+            
+                    
+                    Unicode gotcha's
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8" data-path="../encoding/iso_8859_and_go.html">
+            
+                <a href="../encoding/iso_8859_and_go.html">
+            
+                    
+                    ISO 8859 and Go
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9" data-path="../encoding/other_character_sets_and_go.html">
+            
+                <a href="../encoding/other_character_sets_and_go.html">
+            
+                    
+                    Other character sets and Go
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../security/">
+            
+                <a href="../security/">
+            
+                    
+                    Security
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../security/iso_security_architecture.html">
+            
+                <a href="../security/iso_security_architecture.html">
+            
+                    
+                    ISO security architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../security/data_integrity.html">
+            
+                <a href="../security/data_integrity.html">
+            
+                    
+                    Data integrity
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../security/symmetric_key_encryption.html">
+            
+                <a href="../security/symmetric_key_encryption.html">
+            
+                    
+                    Symmetric key encryption
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../security/public_key_encryption.html">
+            
+                <a href="../security/public_key_encryption.html">
+            
+                    
+                    Public key encryption
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../security/x509_certificates.html">
+            
+                <a href="../security/x509_certificates.html">
+            
+                    
+                    X.509 certificates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../security/tls.html">
+            
+                <a href="../security/tls.html">
+            
+                    
+                    TLS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../http/">
+            
+                <a href="../http/">
+            
+                    
+                    HTTP
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../http/overview_of_http.html">
+            
+                <a href="../http/overview_of_http.html">
+            
+                    
+                    Overview of HTTP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../http/simple_user-agents.html">
+            
+                <a href="../http/simple_user-agents.html">
+            
+                    
+                    Simple user-agents
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../http/configuring_http_requests.html">
+            
+                <a href="../http/configuring_http_requests.html">
+            
+                    
+                    Configuring HTTP requests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../http/the_client_object.html">
+            
+                <a href="../http/the_client_object.html">
+            
+                    
+                    The Client object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../http/proxy_handling.html">
+            
+                <a href="../http/proxy_handling.html">
+            
+                    
+                    Proxy handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../http/https_connections_by_clients.html">
+            
+                <a href="../http/https_connections_by_clients.html">
+            
+                    
+                    HTTPS connections by clients
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="../http/servers.html">
+            
+                <a href="../http/servers.html">
+            
+                    
+                    Servers
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../templates/">
+            
+                <a href="../templates/">
+            
+                    
+                    Templates
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../templates/inserting_object_values.html">
+            
+                <a href="../templates/inserting_object_values.html">
+            
+                    
+                    Inserting object values
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../templates/pipelines.html">
+            
+                <a href="../templates/pipelines.html">
+            
+                    
+                    Pipelines
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../templates/defining_functions.html">
+            
+                <a href="../templates/defining_functions.html">
+            
+                    
+                    Defining functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../templates/variables.html">
+            
+                <a href="../templates/variables.html">
+            
+                    
+                    Variables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../templates/conditional_statements.html">
+            
+                <a href="../templates/conditional_statements.html">
+            
+                    
+                    Conditional statements
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../webserver/">
+            
+                <a href="../webserver/">
+            
+                    
+                    A Complete Web Server
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../webserver/static_pages.html">
+            
+                <a href="../webserver/static_pages.html">
+            
+                    
+                    Static pages
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../webserver/templates.html">
+            
+                <a href="../webserver/templates.html">
+            
+                    
+                    Templates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../webserver/the_chinese_dictionary.html">
+            
+                <a href="../webserver/the_chinese_dictionary.html">
+            
+                    
+                    The Chinese Dictionary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../webserver/flash_cards.html">
+            
+                <a href="../webserver/flash_cards.html">
+            
+                    
+                    Flash cards
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../webserver/the_complete_server.html">
+            
+                <a href="../webserver/the_complete_server.html">
+            
+                    
+                    The Complete Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.6" data-path="../webserver/other_bits_javascript_and_css.html">
+            
+                <a href="../webserver/other_bits_javascript_and_css.html">
+            
+                    
+                    Other Bits: JavaScript and CSS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../html/">
+            
+                <a href="../html/">
+            
+                    
+                    HTML
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../xml/">
+            
+                <a href="../xml/">
+            
+                    
+                    XML
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../xml/parsing_xml.html">
+            
+                <a href="../xml/parsing_xml.html">
+            
+                    
+                    Parsing XML
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../xml/unmarshalling_xml.html">
+            
+                <a href="../xml/unmarshalling_xml.html">
+            
+                    
+                    Unmarshalling XML
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../xml/marshalling_xml.html">
+            
+                <a href="../xml/marshalling_xml.html">
+            
+                    
+                    Marshalling XML
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" data-path="../xml/xhtml_and_html.html">
+            
+                <a href="../xml/xhtml_and_html.html">
+            
+                    
+                    XHTML and HTML
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../rpc/">
+            
+                <a href="../rpc/">
+            
+                    
+                    Remote Procedure Call
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../rpc/go_rpc.html">
+            
+                <a href="../rpc/go_rpc.html">
+            
+                    
+                    Go RPC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="../rpc/json.html">
+            
+                <a href="../rpc/json.html">
+            
+                    
+                    JSON
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../networkchannels/">
+            
+                <a href="../networkchannels/">
+            
+                    
+                    Network channels
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../networkchannels/channel_server.html">
+            
+                <a href="../networkchannels/channel_server.html">
+            
+                    
+                    Channel server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="../networkchannels/channel_client.html">
+            
+                <a href="../networkchannels/channel_client.html">
+            
+                    
+                    Channel client
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="../networkchannels/handling_timeouts.html">
+            
+                <a href="../networkchannels/handling_timeouts.html">
+            
+                    
+                    Handling Timeouts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="../networkchannels/channels_of_channels.html">
+            
+                <a href="../networkchannels/channels_of_channels.html">
+            
+                    
+                    Channels of channels
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../websockets/">
+            
+                <a href="../websockets/">
+            
+                    
+                    Web sockets
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../websockets/web_socket_server.html">
+            
+                <a href="../websockets/web_socket_server.html">
+            
+                    
+                    Web socket server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="../websockets/the_message_object.html">
+            
+                <a href="../websockets/the_message_object.html">
+            
+                    
+                    The Message object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3" data-path="../websockets/the_json_object.html">
+            
+                <a href="../websockets/the_json_object.html">
+            
+                    
+                    The JSON object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.4" data-path="../websockets/the_codec_type.html">
+            
+                <a href="../websockets/the_codec_type.html">
+            
+                    
+                    The Codec type
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.5" data-path="../websockets/web_sockets_over_tls.html">
+            
+                <a href="../websockets/web_sockets_over_tls.html">
+            
+                    
+                    Web sockets over TLS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >TCP Sockets</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="tcp-sockets">TCP Sockets</h2>
+<p>When you know how to reach a service via its network and port IDs, what then? 
+If you are a client you need an API that will allow you to connect to a service and then to send messages to that service and read replies back from the service.</p>
+<p>If you are a server, you need to be able to bind to a port and listen at it. When a message comes in you need to be able to read it and write back to the client.</p>
+<p>The <code>net.TCPConn</code> is the Go type which allows full duplex communication between the client and the server. Two major methods of interest are</p>
+<pre><code class="lang-go"><span class="hljs-keyword">func</span> (c *TCPConn) Write(b []<span class="hljs-keyword">byte</span>) (n <span class="hljs-keyword">int</span>, err os.Error)
+<span class="hljs-keyword">func</span> (c *TCPConn) Read(b []<span class="hljs-keyword">byte</span>) (n <span class="hljs-keyword">int</span>, err os.Error)
+</code></pre>
+<p>A <code>TCPConn</code> is used by both a client and a server to read and write messages. </p>
+<h3 id="tcp-client">TCP client</h3>
+<p>Once a client has established a TCP address for a service, it &quot;dials&quot; the service. If successful, the dial returns a <code>TCPConn</code> for communication. The client and the server exchange messages on this. Typically a client writes a request to the server using the <code>TCPConn</code>, and reads a response from the <code>TCPConn</code>. This continues until either (or both) sides close the connection. A TCP connection is established by the client using the function</p>
+<pre><code class="lang-go"><span class="hljs-keyword">func</span> DialTCP(net <span class="hljs-keyword">string</span>, laddr, raddr *TCPAddr) (c *TCPConn, err os.Error)
+</code></pre>
+<p>where <code>laddr</code> is the local address which is usually set to <code>nil</code> and <code>raddr</code> is the remote address of the service, and the <code>net</code> string is one of <code>&quot;tcp4&quot;</code>, <code>&quot;tcp6&quot;</code> or <code>&quot;tcp&quot;</code> depending on whether you want a TCPv4 connection, a TCPv6 connection or don&apos;t care.</p>
+<p>A simple example can be provided by a client to a web (HTTP) server. We will deal in substantially more detail with HTTP clients and servers in a later chapter, but for now we will keep it simple.</p>
+<p>One of the possible messages that a client can send is the <code>&quot;HEAD&quot;</code> message. This queries a server for information about the server and a document on that server. The server returns information, but does not return the document itself. The request sent to query an HTTP server could be</p>
+<p><code>&quot;HEAD / HTTP/1.0\r\n\r\n&quot;</code></p>
+<p>which asks for information about the root document on the server. A typical response might be</p>
+<pre><code>HTTP/1.0 200 OK
+ETag: &quot;-9985996&quot;
+Last-Modified: Thu, 25 Mar 2010 17:51:10 GMT
+Content-Length: 18074
+Connection: close
+Date: Sat, 28 Aug 2010 00:43:48 GMT
+Server: lighttpd/1.4.23
+</code></pre><p>We first give the program (<code>GetHeadInfo.go</code>) to establish the connection for a TCP address, send the request string, read and print the response. Once compiled it can be invoked by e.g.</p>
+<p><code>GetHeadInfo www.google.com:80</code></p>
+<p>The program is</p>
+<pre><code class="lang-go"><span class="hljs-comment">/* GetHeadInfo
+ */</span>
+<span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> (
+    <span class="hljs-string">&quot;net&quot;</span>
+    <span class="hljs-string">&quot;os&quot;</span>
+    <span class="hljs-string">&quot;fmt&quot;</span>
+    <span class="hljs-string">&quot;io/ioutil&quot;</span>
+)
+
+<span class="hljs-keyword">func</span> main() {
+    <span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(os.Args) != <span class="hljs-number">2</span> {
+        fmt.Fprintf(os.Stderr, <span class="hljs-string">&quot;Usage: %s host:port &quot;</span>, os.Args[<span class="hljs-number">0</span>])
+        os.Exit(<span class="hljs-number">1</span>)
+    }
+    service := os.Args[<span class="hljs-number">1</span>]
+
+    tcpAddr, err := net.ResolveTCPAddr(<span class="hljs-string">&quot;tcp4&quot;</span>, service)
+    checkError(err)
+
+    conn, err := net.DialTCP(<span class="hljs-string">&quot;tcp&quot;</span>, <span class="hljs-literal">nil</span>, tcpAddr)
+    checkError(err)
+
+    _, err = conn.Write([]<span class="hljs-keyword">byte</span>(<span class="hljs-string">&quot;HEAD / HTTP/1.0\r\n\r\n&quot;</span>))
+    checkError(err)
+
+    result, err := ioutil.ReadAll(conn)
+    checkError(err)
+
+    fmt.Println(<span class="hljs-keyword">string</span>(result))
+
+    os.Exit(<span class="hljs-number">0</span>)
+}
+
+<span class="hljs-keyword">func</span> checkError(err error) {
+    <span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+        fmt.Fprintf(os.Stderr, <span class="hljs-string">&quot;Fatal error: %s&quot;</span>, err.Error())
+        os.Exit(<span class="hljs-number">1</span>)
+    }
+}
+</code></pre>
+<p>The first point to note is the almost excessive amount of error checking that is going on. This is normal for networking programs: the opportunities for failure are substantially greater than for standalone programs. Hardware may fail on the client, the server, or on any of the routers and switches in the middle; communication may be blocked by a firewall; timeouts may occur due to network load; the server may crash while the client is talking to it. The following checks are performed:</p>
+<ul>
+<li>There may be syntax errors in the address specified</li>
+<li>The attempt to connect to the remote service may fail. For example, the service requested might not be running, or there may be no such host connected to the network</li>
+<li>Although a connection has been established, writes to the service might fail if the connection has died suddenly, or the network times out</li>
+<li>Similarly, the reads might fail</li>
+</ul>
+<p>Reading from the server requires a comment. In this case, we read essentially a single response from the server. This will be terminated by end-of-file on the connection. However, it may consist of several TCP packets, so we need to keep reading till the end of file. The <code>io/ioutil</code> function <code>ReadAll</code> will look after these issues and return the complete response. (Thanks to Roger Peppe on the golang-nuts mailing list.).</p>
+<p>There are some language issues involved. First, most of the functions return a dual value, with possible error as second value. If no error occurs, then this will be nil. In C, the same behaviour is gained by special values such as <code>NULL</code>, or <code>-1</code>, or zero being returned - if that is possible. In Java, the same error checking is managed by throwing and catching exceptions, which can make the code look very messy.</p>
+<p>In earlier versions of this program, I returned the result in the array <code>buf</code>, which is of type <code>[512]byte</code>. Attempts to coerce this to a string failed - only byte arrays of type <code>[]byte</code> can be coerced. This is a bit of a nuisance. </p>
+<h3 id="a-daytime-server">A Daytime server</h3>
+<p>About the simplest service that we can build is the daytime service. This is a standard Internet service, defined by <em>RFC 867</em>, with a default port of 13, on both TCP and UDP. Unfortunately, with the (justified) increase in paranoia over security, hardly any sites run a daytime server any more. Never mind, we can build our own. (For those interested, if you install <em>inetd</em> on your system, you usually get a daytime server thrown in.)</p>
+<p>A server registers itself on a port, and listens on that port. Then it blocks on an &quot;accept&quot; operation, waiting for clients to connect. When a client connects, the accept call returns, with a connection object. The daytime service is very simple and just writes the current time to the client, closes the connection, and resumes waiting for the next client.</p>
+<p>The relevant calls are</p>
+<pre><code class="lang-go"><span class="hljs-keyword">func</span> ListenTCP(net <span class="hljs-keyword">string</span>, laddr *TCPAddr) (l *TCPListener, err os.Error)
+<span class="hljs-keyword">func</span> (l *TCPListener) Accept() (c Conn, err os.Error)
+</code></pre>
+<p>The argument <code>net</code> can be set to one of the strings <code>&quot;tcp&quot;</code>, <code>&quot;tcp4&quot;</code> or <code>&quot;tcp6&quot;</code>. The IP address should be set to zero if you want to listen on all network interfaces, or to the IP address of a single network interface if you only want to listen on that interface. If the port is set to zero, then the O/S will choose a port for you. Otherwise you can choose your own. Note that on a Unix system, you cannot listen on a port below 1024 unless you are the system supervisor, root, and ports below 128 are standardized by the <em>IETF</em>. The example program chooses port 1200 for no particular reason. The TCP address is given as <code>&quot;:1200&quot;</code> - all interfaces, port 1200.</p>
+<p>The program is</p>
+<pre><code class="lang-go"><span class="hljs-comment">/* DaytimeServer
+ */</span>
+<span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> (
+    <span class="hljs-string">&quot;fmt&quot;</span>
+    <span class="hljs-string">&quot;net&quot;</span>
+    <span class="hljs-string">&quot;os&quot;</span>
+    <span class="hljs-string">&quot;time&quot;</span>
+)
+
+<span class="hljs-keyword">func</span> main() {
+
+    service := <span class="hljs-string">&quot;:1200&quot;</span>
+    tcpAddr, err := net.ResolveTCPAddr(<span class="hljs-string">&quot;tcp4&quot;</span>, service)
+    checkError(err)
+
+    listener, err := net.ListenTCP(<span class="hljs-string">&quot;tcp&quot;</span>, tcpAddr)
+    checkError(err)
+
+    <span class="hljs-keyword">for</span> {
+        conn, err := listener.Accept()
+        <span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+            <span class="hljs-keyword">continue</span>
+        }
+
+        daytime := time.Now().String()
+        conn.Write([]<span class="hljs-keyword">byte</span>(daytime)) <span class="hljs-comment">// don&apos;t care about return value</span>
+        conn.Close()                <span class="hljs-comment">// we&apos;re finished with this client</span>
+    }
+}
+
+<span class="hljs-keyword">func</span> checkError(err error) {
+    <span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+        fmt.Fprintf(os.Stderr, <span class="hljs-string">&quot;Fatal error: %s&quot;</span>, err.Error())
+        os.Exit(<span class="hljs-number">1</span>)
+    }
+}
+</code></pre>
+<p>If you run this server, it will just wait there, not doing much. When a client connects to it, it will respond by sending the daytime string to it and then return to waiting for the next client.</p>
+<p>Note the changed error handling in the server as compared to a client. The server should run forever, so that if any error occurs with a client, the server just ignores that client and carries on. A client could otherwise try to mess up the connection with the server, and bring it down!</p>
+<p>We haven&apos;t built a client. That is easy, just changing the previous client to omit the initial write. Alternatively, just open up a telnet connection to that host:</p>
+<p><code>telnet localhost 1200</code></p>
+<p>This will produce output such as</p>
+<pre><code>$telnet localhost 1200
+Trying ::1...
+Connected to localhost.
+Escape character is &apos;^]&apos;.
+Sun Aug 29 17:25:19 EST 2010Connection closed by foreign host.
+</code></pre><p>where <code>&quot;Sun Aug 29 17:25:19 EST 2010&quot;</code> is the output from the server. </p>
+<h3 id="multi-threaded-server">Multi-threaded server</h3>
+<p>&quot;echo&quot; is another simple <em>IETF</em> service. This just reads what the client types, and sends it back:</p>
+<pre><code class="lang-go"><span class="hljs-comment">/* SimpleEchoServer
+ */</span>
+<span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> (
+    <span class="hljs-string">&quot;net&quot;</span>
+    <span class="hljs-string">&quot;os&quot;</span>
+    <span class="hljs-string">&quot;fmt&quot;</span>
+)
+
+<span class="hljs-keyword">func</span> main() {
+
+    service := <span class="hljs-string">&quot;:1201&quot;</span>
+    tcpAddr, err := net.ResolveTCPAddr(<span class="hljs-string">&quot;tcp4&quot;</span>, service)
+    checkError(err)
+
+    listener, err := net.ListenTCP(<span class="hljs-string">&quot;tcp&quot;</span>, tcpAddr)
+    checkError(err)
+
+    <span class="hljs-keyword">for</span> {
+        conn, err := listener.Accept()
+        <span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+            <span class="hljs-keyword">continue</span>
+        }
+        handleClient(conn)
+        conn.Close() <span class="hljs-comment">// we&apos;re finished</span>
+    }
+}
+
+<span class="hljs-keyword">func</span> handleClient(conn net.Conn) {
+    <span class="hljs-keyword">var</span> buf [<span class="hljs-number">512</span>]<span class="hljs-keyword">byte</span>
+    <span class="hljs-keyword">for</span> {
+        n, err := conn.Read(buf[<span class="hljs-number">0</span>:])
+        <span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+            <span class="hljs-keyword">return</span>
+        }
+        fmt.Println(<span class="hljs-keyword">string</span>(buf[<span class="hljs-number">0</span>:]))
+        _, err2 := conn.Write(buf[<span class="hljs-number">0</span>:n])
+        <span class="hljs-keyword">if</span> err2 != <span class="hljs-literal">nil</span> {
+            <span class="hljs-keyword">return</span>
+        }
+    }
+}
+
+<span class="hljs-keyword">func</span> checkError(err error) {
+    <span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+        fmt.Fprintf(os.Stderr, <span class="hljs-string">&quot;Fatal error: %s&quot;</span>, err.Error())
+        os.Exit(<span class="hljs-number">1</span>)
+    }
+}
+</code></pre>
+<p>While it works, there is a significant issue with this server: it is single-threaded. While a client has a connection open to it, no other client can connect. Other clients are blocked, and will probably time out. Fortunately this is easily fixed by making the client handler a go-routine. We have also moved the connection close into the handler, as it now belongs there</p>
+<pre><code class="lang-go"><span class="hljs-comment">/* ThreadedEchoServer
+ */</span>
+<span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> (
+    <span class="hljs-string">&quot;net&quot;</span>
+    <span class="hljs-string">&quot;os&quot;</span>
+    <span class="hljs-string">&quot;fmt&quot;</span>
+)
+
+<span class="hljs-keyword">func</span> main() {
+
+    service := <span class="hljs-string">&quot;:1201&quot;</span>
+    tcpAddr, err := net.ResolveTCPAddr(<span class="hljs-string">&quot;tcp4&quot;</span>, service)
+    checkError(err)
+
+    listener, err := net.ListenTCP(<span class="hljs-string">&quot;tcp&quot;</span>, tcpAddr)
+    checkError(err)
+
+    <span class="hljs-keyword">for</span> {
+        conn, err := listener.Accept()
+        <span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+            <span class="hljs-keyword">continue</span>
+        }
+        <span class="hljs-comment">// run as a goroutine</span>
+        <span class="hljs-keyword">go</span> handleClient(conn)
+    }
+}
+
+<span class="hljs-keyword">func</span> handleClient(conn net.Conn) {
+    <span class="hljs-comment">// close connection on exit</span>
+    <span class="hljs-keyword">defer</span> conn.Close()
+
+    <span class="hljs-keyword">var</span> buf [<span class="hljs-number">512</span>]<span class="hljs-keyword">byte</span>
+    <span class="hljs-keyword">for</span> {
+        <span class="hljs-comment">// read upto 512 bytes</span>
+        n, err := conn.Read(buf[<span class="hljs-number">0</span>:])
+        <span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+            <span class="hljs-keyword">return</span>
+        }
+
+        <span class="hljs-comment">// write the n bytes read</span>
+        _, err2 := conn.Write(buf[<span class="hljs-number">0</span>:n])
+        <span class="hljs-keyword">if</span> err2 != <span class="hljs-literal">nil</span> {
+            <span class="hljs-keyword">return</span>
+        }
+    }
+}
+
+<span class="hljs-keyword">func</span> checkError(err error) {
+    <span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+        fmt.Fprintf(os.Stderr, <span class="hljs-string">&quot;Fatal error: %s&quot;</span>, err.Error())
+        os.Exit(<span class="hljs-number">1</span>)
+    }
+}
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="services.html" class="navigation navigation-prev " aria-label="Previous page: Services">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="controlling_tcp_connections.html" class="navigation navigation-next " aria-label="Next page: Controlling TCP connections">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"TCP Sockets","level":"1.4.5","depth":2,"next":{"title":"Controlling TCP connections","level":"1.4.6","depth":2,"path":"socket/controlling_tcp_connections.md","ref":"socket/controlling_tcp_connections.md","articles":[]},"previous":{"title":"Services","level":"1.4.4","depth":2,"path":"socket/services.md","ref":"socket/services.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"3.0.x","theme":"default","variables":{},"plugins":["-sharing","katex@1.1.3","edit-link@2.0.x","github@2.0.x"],"pluginsConfig":{"edit-link":{"base":"https://github.com/tumregels/Network-Programming-with-Go/edit/master","label":"Edit"},"github":{"url":"https://github.com/tumregels/Network-Programming-with-Go"},"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":14,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"toc":true},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"socket/tcp_sockets.md","mtime":"2020-03-09T13:33:11.744Z","type":"markdown"},"gitbook":{"version":"3.0.3","time":"2020-03-09T14:42:51.086Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/buttons.js"></script>
+        
+    
+
+    </body>
+</html>
+
