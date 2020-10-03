@@ -1,6 +1,6 @@
 ## JSON
 
-This section adds nothing new to the earlier concepts. It just uses a different "wire" format for the data, JSON instead of `gob`. As such, clients or servers could be written in other languasge that understand sockets and JSON.
+This section adds nothing new to the earlier concepts. It just uses a different "wire" format for the data, JSON instead of `gob`. As such, clients or servers could be written in other languages that understand sockets and JSON.
 
 ### JSON RPC client
 
