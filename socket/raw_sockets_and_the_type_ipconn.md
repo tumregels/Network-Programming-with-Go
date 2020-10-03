@@ -1,6 +1,6 @@
 ## Raw sockets and the type IPConn
 
-This section covers advanced material which most programmers are unlikely to need. it deals with *raw sockets*, which allow the programmer to build their own IP protocols, or use protocols other than TCP or UDP
+This section covers advanced material which most programmers are unlikely to need. It deals with *raw sockets*, which allow the programmer to build their own IP protocols, or use protocols other than TCP or UDP
 
 TCP and UDP are not the only protocols built above the IP layer. The [site]( http://www.iana.org/assignments/protocol-numbers) lists about 140 of them (this list is often available on Unix systems in the file `/etc/protocols`). TCP and UDP are only numbers 6 and 17 respectively on this list.
 
